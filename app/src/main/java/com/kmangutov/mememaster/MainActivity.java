@@ -2,6 +2,8 @@ package com.kmangutov.mememaster;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import butterknife.ButterKnife;
 
@@ -16,5 +18,13 @@ public class MainActivity extends FragmentActivity {
 
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
     }
 }
